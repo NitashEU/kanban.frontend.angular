@@ -1,0 +1,15 @@
+<div *ngIf="board" [ngStyle]="style" class="container">
+  <div
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="drop($event)"
+    fxLayout
+    class="list-container"
+  >
+    <app-board-list *ngFor="let list of board.lists" cdkDrag>
+      <div cdkDragHandle>
+        {{ list.title }}
+      </div>
+    </app-board-list>
+  </div>
+</div>

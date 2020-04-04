@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  height: 100%;
+
+  &.cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  > .list {
+    position: relative;
+    background-color: white;
+
+    padding: 8px;
+    border-radius: 3px;
+
+    > .delete {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: inherit;
+    }
+
+    > .title {
+      cursor: pointer;
+    }
+
+    > .new-card {
+      cursor: pointer;
+    }
+  }
+}
