@@ -18,6 +18,6 @@ RUN rm -rf /usr/share/nginx/html/*
 # From 'builder' copy website to default nginx public folder
 COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy nginx config file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY cd/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
